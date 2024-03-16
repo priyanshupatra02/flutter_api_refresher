@@ -24,22 +24,21 @@ run flutter pub get
 
 - Add your .env file
 
-1. Create a `env.dart` file in the lib/env/env.dart
-2. Add `.env` file in the root of the project.
+1. Add `.env` file in the root of the project.
 
 ```bash
 BASE_URL = "<api_base_url>"
 ```
 
-3. Run 👇🏻 to generate the `env.g.dart` file
+2. Run 👇🏻 to generate the `env.g.dart` file
 
 ```bash
 dart run build_runner build --delete-conflicting-outputs
 ```
 
-4. Make changes in the `lib/features/counter/controller/dio_api_pod.dart` file.
+3. Make changes in the `lib/features/counter/controller/dio_api_pod.dart` file.
 
-5. Go to main.dart and run the app app.
+4. Go to main.dart and run the app app.
 
 ## Contributing
 
