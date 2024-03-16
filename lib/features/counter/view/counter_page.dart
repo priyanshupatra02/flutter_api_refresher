@@ -1,8 +1,8 @@
 import 'package:api_refresher/features/counter/controller/counter_state_pod.dart';
 import 'package:api_refresher/features/counter/controller/dio_api_pod.dart';
+import 'package:api_refresher/features/counter/widgets/retry_button/api_fetcher.dart';
 import 'package:api_refresher/features/theme_segmented_btn/view/theme_segmented_btn.dart';
 import 'package:api_refresher/l10n/l10n.dart';
-import 'package:api_refresher/shared/riverpod_ext/asynvalue_easy_when.dart';
 import 'package:api_refresher/shared/widget/app_locale_popup.dart';
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
@@ -72,28 +72,6 @@ class CounterView extends StatelessWidget {
           ),
         ],
       ),
-    );
-  }
-}
-
-class ApiFetcher extends StatelessWidget {
-  const ApiFetcher({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Consumer(
-      builder: (context, ref, child) {
-        final apiStatus = ref.watch(dioApiProvider);
-        return apiStatus.easyWhen(
-          data: ((data) => Text(data ? 'API is working' : 'API is not working')),
-          loadingWidget: () => const CircularProgressIndicator.adaptive(),
-          errorWidget: (error, _) => Text('Error: $error'),
-          skipLoadingOnRefresh: false,
-          skipLoadingOnReload: false,
-        );
-      },
     );
   }
 }

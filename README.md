@@ -1,16 +1,52 @@
-# api_refresher
+# Flutter Api Refresher
 
-A new Flutter project.
+Powered by [riverpod_simple_architecture](https://github.com/Shreemanarjun/river_bricks/tree/master/bricks/riverpod_simple_architecture) 🚀
 
-## Getting Started
+## Description
 
-This project is a starting point for a Flutter application.
+A Flutter 💙 Riverpod-powered app for automated api requests, if you're a victim of server sleepdown during inactivity 🌱.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Multiple API calls to different server.
+- Riverpod 💙 for state management.
+- No 🚫 authentication required.
+- Multi-platform support.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation
+
+- Install
+
+```bash
+git clone https://github.com/priyanshupatra02/flutter_api_refresher.git
+run flutter pub get
+```
+
+- Add your .env file
+
+1. Create a `env.dart` file in the lib/env/env.dart
+2. Add `.env` file in the root of the project.
+
+```bash
+BASE_URL = "<api_base_url>"
+```
+
+3. Run 👇🏻 to generate the `env.g.dart` file
+
+```bash
+dart run build_runner build --delete-conflicting-outputs
+```
+
+4. Make changes in the `lib/features/counter/controller/dio_api_pod.dart` file.
+
+5. Go to main.dart and run the app app.
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
